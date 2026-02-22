@@ -56,9 +56,48 @@ Options:
 3. **Converge** — a moderator synthesizes agreement into a unified spec
 4. **Export** — final spec is served in a live web UI or exported as markdown
 
-## Prerequisites
+## Setup with OpenRouter (recommended)
 
-You need the [OpenCode SDK](https://github.com/nicepkg/opencode) configured with at least 2 AI providers (or use `--sota` to auto-select models).
+The easiest way to get access to every model is through [OpenRouter](https://openrouter.ai). Configure it once in OpenCode and twofer can use any model OpenRouter supports.
+
+**1. Get an OpenRouter API key** at [openrouter.ai/keys](https://openrouter.ai/keys)
+
+**2. Add it to your OpenCode config** (`~/.config/opencode/config.json`):
+
+```json
+{
+  "provider": {
+    "openrouter": {
+      "apiKey": "sk-or-..."
+    }
+  }
+}
+```
+
+**3. Run twofer** — it auto-discovers OpenRouter as a provider and all its models become available:
+
+```bash
+# Auto-picks the best available models
+twofer "build a real-time chat app"
+
+# Or pick specific models via OpenRouter
+twofer "design a payment system" \
+  --agent "openrouter/anthropic/claude-opus-4-6" \
+  --agent "openrouter/openai/gpt-5.2-codex"
+```
+
+### How provider discovery works
+
+On startup, twofer queries OpenCode for all connected providers and their models. It scans every provider — OpenRouter, Anthropic, OpenAI, Google, and any others you've configured — to find available models. This means:
+
+- **One provider is enough** — OpenRouter alone gives you access to 200+ models
+- **Multiple providers work too** — if you have both Anthropic and OpenAI keys configured directly, twofer sees both
+- **`--sota` mode** picks 4 top-tier models from whatever providers are available
+- **`--agent` flag** lets you target a specific provider/model combination
+
+### Other providers
+
+You can configure any provider that OpenCode supports (Anthropic, OpenAI, Google, etc.) the same way — add the API key to your OpenCode config and twofer picks it up automatically.
 
 ## License
 
