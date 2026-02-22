@@ -1,0 +1,20 @@
+{
+  "name": "twofer-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts TwoferShowcase twofer-showcase.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.293",
+    "@remotion/google-fonts": "4.0.293",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.293"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

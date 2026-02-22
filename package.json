@@ -1,0 +1,32 @@
+{
+  "name": "twofer",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "twofer": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist/",
+    "web/out/"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:web": "cd web && bun run build",
+    "build:all": "bun run build:web && bun run build",
+    "prepublishOnly": "bun run build:all",
+    "dev": "tsc -p tsconfig.json --watch",
+    "start": "bun dist/cli/index.js"
+  },
+  "dependencies": {
+    "@opencode-ai/sdk": "^1.2.10",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "ws": "^8.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/ws": "^8.5.14",
+    "typescript": "^5.7.3"
+  }
+}

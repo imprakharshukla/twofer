@@ -1,0 +1,15 @@
+node_modules/
+dist/
+web/out/
+web/.next/
+remotion/node_modules/
+remotion/out/
+*.tgz
+*.mp4
+.DS_Store
+.env
+.agents/
+.claude/
+skills-lock.json
+PLAN.md
+web/tsconfig.tsbuildinfo

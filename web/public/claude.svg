@@ -1,0 +1,143 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Flat-topped hexagon path with precise mathematical coordinates -->
+        <polygon id="hex" points="150,0 75,129.9038 -75,129.9038 -150,0 -75,-129.9038 75,-129.9038"
+                 fill="none" stroke="#FF6B2B" stroke-width="1" vector-effect="non-scaling-stroke"
+                 stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="10" />
+    </defs>
+
+    <!-- Center Coordinate System -->
+    <g transform="translate(150, 150)">
+        
+        <!-- Expanding Concentric Hexagonal Rings -->
+        <g>
+            <!-- Ring 1 -->
+            <g>
+                <animateTransform attributeName="transform" type="scale" values="0; 1.5" dur="4s" begin="0s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1; 0.1; 0" keyTimes="0; 0.95; 1" dur="4s" begin="0s" repeatCount="indefinite" />
+                <use href="#hex">
+                    <animateTransform attributeName="transform" type="rotate" values="0; 120" dur="4s" begin="0s" repeatCount="indefinite" />
+                </use>
+            </g>
+            
+            <!-- Ring 2 -->
+            <g>
+                <animateTransform attributeName="transform" type="scale" values="0; 1.5" dur="4s" begin="-0.8s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1; 0.1; 0" keyTimes="0; 0.95; 1" dur="4s" begin="-0.8s" repeatCount="indefinite" />
+                <use href="#hex">
+                    <animateTransform attributeName="transform" type="rotate" values="0; 120" dur="4s" begin="-0.8s" repeatCount="indefinite" />
+                </use>
+            </g>
+
+            <!-- Ring 3 -->
+            <g>
+                <animateTransform attributeName="transform" type="scale" values="0; 1.5" dur="4s" begin="-1.6s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1; 0.1; 0" keyTimes="0; 0.95; 1" dur="4s" begin="-1.6s" repeatCount="indefinite" />
+                <use href="#hex">
+                    <animateTransform attributeName="transform" type="rotate" values="0; 120" dur="4s" begin="-1.6s" repeatCount="indefinite" />
+                </use>
+            </g>
+
+            <!-- Ring 4 -->
+            <g>
+                <animateTransform attributeName="transform" type="scale" values="0; 1.5" dur="4s" begin="-2.4s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1; 0.1; 0" keyTimes="0; 0.95; 1" dur="4s" begin="-2.4s" repeatCount="indefinite" />
+                <use href="#hex">
+                    <animateTransform attributeName="transform" type="rotate" values="0; 120" dur="4s" begin="-2.4s" repeatCount="indefinite" />
+                </use>
+            </g>
+
+            <!-- Ring 5 -->
+            <g>
+                <animateTransform attributeName="transform" type="scale" values="0; 1.5" dur="4s" begin="-3.2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1; 0.1; 0" keyTimes="0; 0.95; 1" dur="4s" begin="-3.2s" repeatCount="indefinite" />
+                <use href="#hex">
+                    <animateTransform attributeName="transform" type="rotate" values="0; 120" dur="4s" begin="-3.2s" repeatCount="indefinite" />
+                </use>
+            </g>
+        </g>
+
+        <!-- Invisible Radial Lines / Data Flow Dots -->
+        <!-- Dots traverse outward at highly exact angles, with varying temporal offsets for a "network flow" feel -->
+        <g>
+            <g transform="rotate(0)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-0.1s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-0.1s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(30)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-1.3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-1.3s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(60)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-0.7s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-0.7s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(90)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-1.9s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-1.9s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(120)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-0.4s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-0.4s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(150)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-1.6s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-1.6s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(180)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-1.0s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-1.0s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(210)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-2.2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-2.2s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(240)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-0.2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-0.2s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(270)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-1.4s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-1.4s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(300)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-0.8s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-0.8s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+            <g transform="rotate(330)">
+                <circle cx="0" cy="0" r="1.5" fill="#FF6B2B">
+                    <animate attributeName="cx" values="10; 200" dur="2.4s" begin="-2.0s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.05; 0.8; 1" dur="2.4s" begin="-2.0s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+        </g>
+
+        <!-- Solid Center Square, pulsing perfectly in sync with the generation of new rings (every 0.8s) -->
+        <rect x="-4" y="-4" width="8" height="8" fill="#FF6B2B">
+            <animateTransform attributeName="transform" type="scale" values="1; 1.35; 1" dur="0.8s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="1; 0.6; 1" dur="0.8s" repeatCount="indefinite" />
+        </rect>
+    </g>
+</svg>
