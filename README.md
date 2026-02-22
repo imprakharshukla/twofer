@@ -2,6 +2,10 @@
 
 Multi-agent design debate CLI. Give it a prompt, and multiple AI agents will debate the architecture — then converge on a battle-tested spec.
 
+![twofer](https://raw.githubusercontent.com/imprakharshukla/twofer/main/web/public/og.png)
+
+<video src="https://github.com/imprakharshukla/twofer/raw/main/remotion/twofer-showcase.mp4" width="100%" autoplay loop muted playsinline></video>
+
 ## Install
 
 ```bash

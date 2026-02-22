@@ -6,6 +6,7 @@ remotion/node_modules/
 remotion/out/
 *.tgz
 *.mp4
+!remotion/twofer-showcase.mp4
 .DS_Store
 .env
 .agents/
